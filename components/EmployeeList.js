@@ -17,10 +17,10 @@ function EmployeeList({ employeeData }) {
         <thead className={styles.thead}>
           <tr>
             <th className={styles.th}>EmployeeId</th>
-            <th className={styles.th}>EmployeeName</th>
-            <th className={styles.th}>EmployeeEmail</th>
-            <th className={styles.th}>EmployeeAddress</th>
-            <th className={styles.th}>EmployeePhone</th>
+            <th className={styles.th}>이름</th>
+            <th className={styles.th}>영어</th>
+            <th className={styles.th}>수학</th>
+            <th className={styles.th}>과학</th>
             <th className={styles.th}>Actions</th>
           </tr>
         </thead>

@@ -43,17 +43,17 @@ function AddEmployee() {
               type="text"
               className={styles.input}
               name="emp_name"
-              placeholder="Enter Name"
+              placeholder="이름"
               onChange={handleChange}
               value={addEmployee.emp_name}
             />
           </div>
           <div>
             <input
-              type="email"
+              type="text"
               className={styles.input}
               name="emp_email"
-              placeholder="Enter Email"
+              placeholder="영어"
               onChange={handleChange}
               value={addEmployee.emp_email}
             />
@@ -63,7 +63,7 @@ function AddEmployee() {
               type="text"
               className={styles.input}
               name="emp_address"
-              placeholder="Enter Address"
+              placeholder="수학"
               onChange={handleChange}
               value={addEmployee.emp_address}
             />
@@ -73,7 +73,7 @@ function AddEmployee() {
               type="text"
               className={styles.input}
               name="emp_phone"
-              placeholder="Enter Phone"
+              placeholder="과학"
               onChange={handleChange}
               value={addEmployee.emp_phone}
             />
