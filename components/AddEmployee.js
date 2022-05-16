@@ -11,7 +11,7 @@ function AddEmployee() {
     emp_address: "",
     emp_phone: "",
   });
-
+  
   const onSubmit = async (e) => {
     e.preventDefault();
     let data = await axios.post(
@@ -37,41 +37,41 @@ function AddEmployee() {
       <Header />
       <div className={styles.addform}>
         <h1>ADD EMPLOYEE</h1>
-        <form onSubmit={onSubmit}>
-          <div>
+        <form className={styles.form_center} onSubmit={onSubmit}>
+          <div className={styles.input_background}>
             <input
               type="text"
-              className={styles.input}
+              className={styles.input_time}
               name="emp_name"
               placeholder="이름"
               onChange={handleChange}
               value={addEmployee.emp_name}
             />
-          </div>
-          <div>
+          </div><br />
+          <div className={styles.input_background}>
             <input
               type="text"
-              className={styles.input}
+              className={styles.input_time}
               name="emp_email"
               placeholder="영어"
               onChange={handleChange}
               value={addEmployee.emp_email}
             />
           </div>
-          <div>
+          <div className={styles.input_background}>
             <input
               type="text"
-              className={styles.input}
+              className={styles.input_time}
               name="emp_address"
               placeholder="수학"
               onChange={handleChange}
               value={addEmployee.emp_address}
             />
           </div>
-          <div>
+          <div className={styles.input_background}>
             <input
               type="text"
-              className={styles.input}
+              className={styles.input_time}
               name="emp_phone"
               placeholder="과학"
               onChange={handleChange}
@@ -79,7 +79,7 @@ function AddEmployee() {
             />
           </div>
           <div>
-            <button type="submit"> Submit</button>
+            <button className={styles.Get_button} type="submit"> Submit</button>
           </div>
         </form>
       </div>
