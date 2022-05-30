@@ -1,26 +1,11 @@
-// const { createPool } = require("mysql");
-const mysql = require("serverless-mysql")();
-// const pool = createPool({
-//   host: "localhost",
-//   user: "root",
-//   password: "India@100",
-//   port: 3306,
-//   database: "data",
-// });
 
+const mysql = require("serverless-mysql")();
 mysql.config({
   host: "localhost",
   database: "data",
   user: "root",
   password: "",
 });
-
-// pool.getConnection((err) => {
-//   if (err) {
-//     console.log("Error conntecting to db...");
-//   }
-//   console.log("Connected to db...");
-// });
 
 const executeQuery = (query, arraParms) => {
   return new Promise((resolve, reject) => {

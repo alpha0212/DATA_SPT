@@ -5,36 +5,36 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/employee", async (req, res) => {
+app.get("/spt", async (req, res) => {
   try {
-    let employeeData = await executeQuery("select * from employee");
-    res.status(200).json(employeeData);
+    let sptData = await executeQuery("select * from spt");
+    res.status(200).json(sptData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-app.get("/employee/:id", async (req, res) => {
+app.get("/spt/:id", async (req, res) => {
   let id = req.params.id;
   try {
-    let employeeData = await executeQuery(
-      "select * from employee where emp_id=?",
+    let sptData = await executeQuery(
+      "select * from spt where spt_id=?",
       [id]
     );
-    res.status(200).json(employeeData);
+    res.status(200).json(sptData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-app.post("/saveEmployee", async (req, res) => {
+app.post("/saveSpt", async (req, res) => {
   try {
-    const { emp_name, emp_email, emp_address, emp_phone } = req.body;
-    let employeeData = await executeQuery(
-      "insert into employee(emp_name,emp_email,emp_address,emp_phone) values(?,?,?,?)",
-      [emp_name, emp_email, emp_address, emp_phone]
+    const { spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action } = req.body;
+    let sptData = await executeQuery(
+      "insert into spt(spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      [spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action]
     );
-    res.status(201).json(employeeData);
+    res.status(201).json(sptData);
   } catch (err) {
     res.status(400).json(err);
   }
