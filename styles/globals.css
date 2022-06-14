@@ -3,7 +3,6 @@
   font-family: 'Pretendard';
   src: url(../public/static/woff2/Pretendard-Light.woff2);
 }
-html,
 body {
   background-color: rgba(249, 249, 249);
   color: black;
@@ -11,7 +10,6 @@ body {
   width: 100%;
   margin: 0;
   font-family: Pretendard;
-  padding-top: 50px;
 }
 
 a {

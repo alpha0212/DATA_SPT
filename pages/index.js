@@ -11,12 +11,6 @@ export default function Home() {
   return (
     <main>
       <Title title="Home" />
-      <div className={styles.button_index}>
-        <Link href="/Menu">
-          <button className={styles.Get_button}><a >Get Started</a></button>
-        </Link>
-        
-      </div>
     </main>
   );
 }

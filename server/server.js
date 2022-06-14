@@ -1,6 +1,6 @@
 const express = require("express");
 const { executeQuery } = require("../config/db");
-const port = 9000;
+const port = process.env.PORT || 9000;
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -44,13 +44,6 @@ const FormData = require("form-data");
 const _ = require("lodash");
 const path = require("path");
 const fs = require("fs");
-// const upload = multer({
-//   storage: multer.diskStorage({
-//     destination: "./public/uploads",
-//     filename: (req, file, cb) => cb(null, file.originalname),
-//   }),
-// });
-// const uploadFile = upload.single("file");
 let multer = Multer({
   storage: Multer.MemoryStorage,
   limits: {

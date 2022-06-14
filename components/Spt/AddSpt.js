@@ -1,12 +1,11 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import Title from '../Title';
+import axios from 'axios';
+import { React, useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from "next/link";
 import styles from "../styles/Today.module.css";
-import Title from "./Title";
 
-function EditSpt({ sptUpdateData }) {
-  console.log("sptid", sptUpdateData);
+function AddSpt() {
   const router = useRouter();
   const [addSpt, setSpt] = useState({
     spt_day: "",
@@ -26,13 +25,11 @@ function EditSpt({ sptUpdateData }) {
     spt_break: "",
     spt_break_action: "",
   });
-  useEffect(() => {
-    setSpt(sptUpdateData[0]);
-  }, [sptUpdateData]);
+  
   const onSubmit = async (e) => {
     e.preventDefault();
-    let data = await axios.put(
-      `http://localhost:3000/api/spt/${sptUpdateData[0].spt_id}`,
+    let data = await axios.post(
+      `http://localhost:3000/api/spt`,
       addSpt
     );
     if (data.data) router.push("/spts");
@@ -58,13 +55,15 @@ function EditSpt({ sptUpdateData }) {
 
   const handleChange = (e) => {
     const value = e.target.value;
-    console.log("value", value);
     setSpt({ ...addSpt, [e.target.name]: value });
+    
   };
   return (
-       <>
+    <>
+            
             <Title title="Today" />
             <div className={styles.content_line}>Input Now</div>
+            
             <div className={styles.input_center}>
                 <form onSubmit={onSubmit}>
                     <div className={styles.input_background}>
@@ -72,6 +71,7 @@ function EditSpt({ sptUpdateData }) {
                             type="text"
                             className={styles.input_time}
                             name="spt_day"
+                            placeholder="요일"
                             onChange={handleChange}
                             value={addSpt.spt_day}
                         />
@@ -222,13 +222,12 @@ function EditSpt({ sptUpdateData }) {
                             className={styles.input_time}
                             name="spt_break_action"
                             placeholder="휴식 때 한것"
-                            onChange={handleChange}
-                            value={addSpt.spt_break_action}
-                        />
+                            onChange={handleChange}  
+                            value={addSpt.spt_break_action}    
+                                              />
                     </div>
                     <div className={styles.input_center}>
-                        <button className={styles.Get_button} type="submit">Submit</button>
-                        <button className={styles.Get_button}><Link href={`/spts`}>Back</Link></button>
+                      <button className={styles.Get_button} type="submit">Submit</button>
                     </div>
                 </form>
             </div>
@@ -236,4 +235,4 @@ function EditSpt({ sptUpdateData }) {
     );
   }
 
-  export default EditSpt;
+  export default AddSpt;

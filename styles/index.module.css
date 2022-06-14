@@ -23,7 +23,7 @@
 
 }
 
-@-webkit-keyframes fadein { 
+@keyframes fadein { 
   from {
       opacity: 0;
   }
@@ -68,7 +68,7 @@
 
 .Title_index_text{
   font-size: 3vw;
-  -webkit-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   padding-top: 20px;
   font-style: normal;
 }
@@ -111,20 +111,48 @@
         }
 
 
-.Get_button{
-  background-color: rgb(95, 146, 255);
-  border-radius: 5px;
-  text-align: center;
-  width: 150px;
-  height: 7vh;
-  color: rgb(240, 240, 240);
-  font-family: Pretendard;
-
-}
 
 .button_index{
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  align-items: right;
+  font-family: Pretendard;
+  padding-top: 20px;
+  padding-right: 10px;
+}
+
+.content_line{
+  display: flex;
+  flex-basis: 100%;
   align-items: center;
-  padding-top: 40px;
+  color: rgba(0,0,0,0.35);
+  font-size: 14px;
+  margin: 0px;
+  padding-top: 20px;
+}
+
+.content_line::before{
+  content: "";
+  flex-grow: 1;
+  margin: 0px 0px;
+  background: rgba(0, 0, 0, 0.35);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+}
+
+.content_line::after{
+  content: "";
+  flex-grow: 1;
+  margin: 0px 0px;
+  background: rgba(0, 0, 0, 0.35);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+}
+
+.menu_list{
+  font-size: 1.5vw;
+  margin-right: 2vw;
+  margin-left: 2vw;
 }

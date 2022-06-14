@@ -1,6 +1,6 @@
 
 .book_image{
-  -webkit-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   padding-left: 20px;
 }
 
@@ -29,7 +29,7 @@
 
 }
 
-@-webkit-keyframes fadein { 
+@keyframes fadein { 
   from {
       opacity: 0;
   }
@@ -74,7 +74,18 @@
 
 .Title_index_text{
   font-size: 3vw;
-  -webkit-animation: fadein 2.5s;
+  animation: fadein 2.5s;
   padding-top: 20px;
   font-style: normal;
 }
+
+.header{
+  z-index: 1; 
+  padding-top: 20px;
+}
+.header_menu{
+  display: flex;
+  justify-content: center;
+  
+}
+

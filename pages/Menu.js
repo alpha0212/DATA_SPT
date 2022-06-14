@@ -1,5 +1,5 @@
 import React from "react";
-import MenuSpt from '../components/MenuSpt';
+import MenuSpt from '../components/Spt/MenuSpt';
 
 
 

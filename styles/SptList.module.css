@@ -4,7 +4,10 @@
     border-collapse: collapse;
     margin-top: 5px;
   }
-  
+  .tbody{
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 5000px;
+  }
   .th,
   .td {
     padding: 16px 24px;
