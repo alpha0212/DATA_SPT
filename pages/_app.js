@@ -9,11 +9,9 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     const start = () => {
-      // NProgress.start();
       setLoading(true);
     };
     const end = () => {
-      // NProgress.done();
       setLoading(false);
     };
 

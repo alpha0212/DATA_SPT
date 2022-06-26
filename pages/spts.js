@@ -1,4 +1,4 @@
-import SptList from "../components/SptList";
+import SptList from "../components/Spt/SptList";
 function spts({ data }) {
   console.log("data", data);
   return (

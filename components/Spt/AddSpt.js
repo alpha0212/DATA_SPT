@@ -2,8 +2,7 @@ import Title from '../Title';
 import axios from 'axios';
 import { React, useState } from 'react';
 import { useRouter } from 'next/router';
-import Link from "next/link";
-import styles from "../styles/Today.module.css";
+import styles from "../../styles/Today.module.css";
 
 function AddSpt() {
   const router = useRouter();
@@ -55,6 +54,7 @@ function AddSpt() {
 
   const handleChange = (e) => {
     const value = e.target.value;
+    console.log("value: ", value);
     setSpt({ ...addSpt, [e.target.name]: value });
     
   };
@@ -68,13 +68,61 @@ function AddSpt() {
                 <form onSubmit={onSubmit}>
                     <div className={styles.input_background}>
                         <input 
-                            type="text"
+                            type="radio"
                             className={styles.input_time}
                             name="spt_day"
                             placeholder="요일"
                             onChange={handleChange}
-                            value={addSpt.spt_day}
-                        />
+                            value={`월`}
+                        />월
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`화`}
+                        />화
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`수`}
+                        />수
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`목`}
+                        />목
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`금`}
+                        />금
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`토`}
+                        />토
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`일`}
+                        />일
                     </div>
                     <div className={styles.input_background}>
                         <input

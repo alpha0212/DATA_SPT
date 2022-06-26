@@ -1,50 +1,13 @@
-.table {
-    width: 100%;
-    border: 1px solid #343a40;
-    border-collapse: collapse;
-    margin-top: 5px;
-  }
-  .tbody{
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 5000px;
-  }
-  .th,
-  .td {
-    padding: 16px 24px;
-    text-align: left;
-  }
+.container{
+  width: 100%;
   
-  .thead th {
-    background-color: #212529;
-    color: #fff;
-    width: 25%;
-  }
-  
-  .tbody tr:nth-child(odd) {
-    background-color: #f8f9fa;
-  }
-  .tbody tr:nth-child(even) {
-    background-color: #e9ecef;
-  }
-  .delete {
-    background-color: red;
-    border: none;
-  } 
-  .addEmployee {
-    background-color: rgb(95, 146, 255);
-    border-radius: 5px;
-    text-align: center;
-    border: none;
-    width: 150px;
-    height: 7vh;
-    color: rgb(240, 240, 240);
-    font-family: Pretendard;
-  }
-  .update {
-    background-color: skyblue;
-    border: none;
-  }
-  .addEmployeeCenter {
-    text-align: center;
-  }
-  
+}
+
+.raw{
+  display: flex;
+  justify-content: center;
+}
+
+.tr_list{
+  margin: 10px;
+}

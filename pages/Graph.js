@@ -1,37 +1,12 @@
 import { useState } from 'react';
-import BarGraph from '../components/Graph/BarGraphrGraph';
-import LineGraph from '../components/Graph/LineGrapheGraph';
-import PieGraph from '../components/Graph/PieGrapheGraph';
-import {TimeData} from "../Dataa";
+import BarGraph from '../components/GraphList/BarGraph';
+import LineGraph from '../components/GraphList/LineGraph';
+import PieGraph from '../components/GraphList/PieGraph';
 import styles from "../styles/DataGraph.module.css";
 
 
 export default function Graph() {
   const TimeData = [
-    {
-      sub: "수학",
-      time: 14,
-    },
-    {
-      sub: "수학",
-      time: 14,
-    },
-    {
-      sub: "수학",
-      time: 14,
-    },
-    {
-      sub: "수학",
-      time: 14,
-    },
-    {
-      sub: "수학",
-      time: 14,
-    },
-    {
-      sub: "수학",
-      time: 14,
-    },
   ]
   const [timeData, setTimeData] = useState({
     labels: TimeData.map((data) => data.sub),

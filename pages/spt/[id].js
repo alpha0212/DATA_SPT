@@ -1,4 +1,4 @@
-import EditSpt from "../../components/EditSpt";
+import EditSpt from "../../components/Spt/EditSpt";
 
 function updateSpt({ spt }) {
   console.log("spt", spt);

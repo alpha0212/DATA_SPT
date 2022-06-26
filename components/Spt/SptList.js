@@ -1,8 +1,8 @@
 import {React, useState} from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "../styles/SptList.module.css";
-import style from "../styles/Today.module.css";
+import styles from "../../styles/SptList.module.css";
+import style from "../../styles/Today.module.css";
 import axios from "axios";
 
 
@@ -14,31 +14,35 @@ function SptList({sptData}) {
     };
     return (
         <>
-            <table className={styles.table}>
-                <thead className={styles.thead}>
+        <div className={styles.container}>
+            <div>
+                <table>
+                <thead>
                     <tr>
-                        <th className={styles.th}>ID</th>
-                        <th className={styles.th}>이름</th>
-                        <th className={styles.th}>요일</th>
-                        <th className={styles.th}>목표기상시간</th>
-                        <th className={styles.th}>실제기상시간</th>
-                        <th className={styles.th}>목표취침시간</th>
-                        <th className={styles.th}>실제취침시간</th>
-                        <th className={styles.th}>낮잠시간</th>
-                        <th className={styles.th}>국어</th>
-                        <th className={styles.th}>영어</th>
-                        <th className={styles.th}>수학</th>
-                        <th className={styles.th}>과학</th>
-                        <th className={styles.th}>사회</th>
-                        <th className={styles.th}>한국사</th>
-                        <th className={styles.th}>내신기타공부시간</th>
-                        <th className={styles.th}>필수시간</th>
-                        <th className={styles.th}>휴식시간</th>
-                        <th className={styles.th}>휴식할 때 한것</th>
+                        <th>ID</th>
+                        <th>이름</th>
+                        <th>요일</th>
+                        <th>목표기상시간</th>
+                        <th>실제기상시간</th>
+                        <th>목표취침시간</th>
+                        <th>실제취침시간</th>
+                        <th>낮잠시간</th>
+                        <th>국어</th>
+                        <th>영어</th>
+                        <th>수학</th>
+                        <th>과학</th>
+                        <th>사회</th>
+                        <th>한국사</th>
+                        <th>내신기타공부시간</th>
+                        <th>필수시간</th>
+                        <th>휴식시간</th>
+                        <th>휴식할 때 한것</th>
                     </tr>
                 </thead>
+                </table>
+            </div>
 
-
+            <table className={styles.raw}>
                 <tbody className={styles.tbody}>
                     {sptData.map((sptData, index) =>(
                         <tr key={index}>
@@ -77,6 +81,7 @@ function SptList({sptData}) {
                     ))}
                 </tbody>
             </table>
+        </div>
             <div className={styles.addEmployeeCenter}>
                 <Link href={`/addSpt`}>
                     <button className={style.Get_button}>AddSpt</button>

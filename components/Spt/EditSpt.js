@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import styles from "../styles/Today.module.css";
+import styles from "../../styles/Today.module.css";
 import Title from "../Title";
 
 function EditSpt({ sptUpdateData }) {
@@ -25,6 +25,7 @@ function EditSpt({ sptUpdateData }) {
     spt_livetime: "",  
     spt_break: "",
     spt_break_action: "",
+    spt_name: "",
   });
   useEffect(() => {
     setSpt(sptUpdateData[0]);
