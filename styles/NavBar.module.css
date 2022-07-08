@@ -2,6 +2,7 @@
 .book_image{
   animation: fadein 2.5s;
   padding-left: 20px;
+  padding-top: 20px;
 }
 
 .Title_index_text{

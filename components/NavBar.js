@@ -10,12 +10,9 @@ export default function NavBar(){
     return (
       <>
         <MenuSpt />
-        <Image
-          className={styles.book_image}
-          src="/book3.jpg"
-          width="1920"
-          height="550"
-        />
+        <div className={styles.book_image}>
+          <Image src="/book3.jpg" width="1920" height="550" />
+        </div>
         <div className={styles.NavBar_container}>
           <Link href="/">
             <a className={router.pathname === "/" ? "active" : ""}>

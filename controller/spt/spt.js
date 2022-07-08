@@ -44,15 +44,15 @@ const deleteSptById = async (req, res, next) => {
 const saveSpt = async (req, res) => {
   try {
     const result = req.body;
-    const { spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action, spt_name } = result;
+    const { spt_name, spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action} = result;
     let { error } = sptValidation(result);
     if (error) {
       res.status(400).json(error.details[0].message);
     } else {
       console.log("post request");
       let sptData = await executeQuery(
-        "insert into spt(spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action, spt_name) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-        [spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action, spt_name]
+        "insert into spt(spt_name, spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        [spt_name, spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action]
       );
       sptData = await executeQuery(
         `select * from spt where spt_id=${sptData.insertId}`
@@ -67,7 +67,7 @@ const saveSpt = async (req, res) => {
 const updateSpt = async (req, res) => {
   let id = req.query.id;
   console.log("id", id);
-  const { spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action, spt_name } = req.body;
+  const { spt_name, spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action} = req.body;
   console.log("req.body", req.body);
   try {
     let sptData = await executeQuery(
@@ -77,8 +77,8 @@ const updateSpt = async (req, res) => {
     if (sptData.length > 0) {
       console.log("putrequest", sptData);
       sptData = await executeQuery(
-        `update spt set spt_day=?, spt_set_morning=?, spt_morning=?, spt_set_sleep=?, spt_sleep=?, spt_siesta=?, spt_kor=?, spt_eng=?, spt_math=?, spt_science=?, spt_community=?, spt_kh=?, spt_study=?, spt_livetime=?, spt_break=?, spt_break_action=?, spt_name=?, where spt_id=${id}`,
-        [spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action, spt_name]
+        `update spt set spt_name=?, spt_day=?, spt_set_morning=?, spt_morning=?, spt_set_sleep=?, spt_sleep=?, spt_siesta=?, spt_kor=?, spt_eng=?, spt_math=?, spt_science=?, spt_community=?, spt_kh=?, spt_study=?, spt_livetime=?, spt_break=?, spt_break_action=?,  where spt_id=${id}`,
+        [spt_name, spt_day, spt_set_morning, spt_morning, spt_set_sleep, spt_sleep, spt_siesta, spt_kor, spt_eng, spt_math, spt_science, spt_community, spt_kh, spt_study, spt_livetime, spt_break, spt_break_action]
       );
       res.status(200).json(sptData);
     } else {

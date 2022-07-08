@@ -3,24 +3,26 @@ import BarGraph from '../components/GraphList/BarGraph';
 import LineGraph from '../components/GraphList/LineGraph';
 import PieGraph from '../components/GraphList/PieGraph';
 import styles from "../styles/DataGraph.module.css";
+import {UserData} from "./Data";
 
 
 export default function Graph() {
-  const TimeData = [
-  ]
-  const [timeData, setTimeData] = useState({
-    labels: TimeData.map((data) => data.sub),
+
+  const [userData, setUserData] = useState({
+    labels: UserData.map((data) => data.sub),
     datasets: [
       {
-        label: "공부시간",
-        data: TimeData.map((data) => data.time),
-        backgroundColor:[
-          "rgba(75,192,192,1)",
-          "#ecf0f1",
-          "#50AF95",
-          "#f3ba2f",
-          "#2a71d0",
-          "red",
+        label: "시간데이터",
+        data: UserData.map((data) => data.time),
+        backgroundColor: [
+          "#f4f0e6",
+          "#d9d9f3",
+          "#ceefe4",
+          "#9dd3a8",
+          "#96ceb4",
+          "#ffeead",
+          "#d9534f",
+          "#ffad60",
         ],
         borderColor: "black",
         borderWidth: 2,
@@ -32,19 +34,19 @@ export default function Graph() {
         <div className={styles.content_line} />
         <div className={styles.graph_center}>
           <div className={styles.BarGraph}>
-            <BarGraph chartData={timeData}/>
+            <BarGraph chartData={userData}/>
           </div>
         </div>
         <div className={styles.content_line} />
         <div className={styles.graph_center}>        
           <div className={styles.LineGraph}>
-            <LineGraph chartData={timeData}/>
+            <LineGraph chartData={userData}/>
           </div>
         </div>
         <div className={styles.content_line} />
         <div className={`${styles.graph_center}`}>
           <div className={styles.PieGraph}>
-            <PieGraph chartData={timeData}/>
+            <PieGraph chartData={userData}/>
           </div>
         </div>
       </div>

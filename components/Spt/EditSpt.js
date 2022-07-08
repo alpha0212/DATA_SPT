@@ -9,6 +9,7 @@ function EditSpt({ sptUpdateData }) {
   console.log("sptid", sptUpdateData);
   const router = useRouter();
   const [addSpt, setSpt] = useState({
+    spt_name: "",
     spt_day: "",
     spt_set_morning: "",
     spt_morning: "",
@@ -38,6 +39,7 @@ function EditSpt({ sptUpdateData }) {
     );
     if (data.data) router.push("/spts");
     setSpt({
+      spt_name: "",
       spt_day: "",
       spt_set_morning: "",
       spt_morning: "",
@@ -68,13 +70,72 @@ function EditSpt({ sptUpdateData }) {
             <div className={styles.content_line}>Input Now</div>
             <div className={styles.input_center}>
                 <form onSubmit={onSubmit}>
-                    <div className={styles.input_background}>
+                <div className={styles.input_background}>
                         <input 
-                            type="text"
+                            type="radio"
                             className={styles.input_time}
                             name="spt_day"
+                            placeholder="요일"
                             onChange={handleChange}
-                            value={addSpt.spt_day}
+                            value={`월`}
+                        />월
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`화`}
+                        />화
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`수`}
+                        />수
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`목`}
+                        />목
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`금`}
+                        />금
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`토`}
+                        />토
+                        <input 
+                            type="radio"
+                            className={styles.input_time}
+                            name="spt_day"
+                            placeholder="요일"
+                            onChange={handleChange}
+                            value={`일`}
+                        />일
+                    </div>
+                    <div className={styles.input_background}>
+                        <input
+                            type="text"
+                            className={styles.input_time}
+                            name="spt_name"
+                            placeholder="이름"
+                            onChange={handleChange}
+                            value={addSpt.spt_name}
                         />
                     </div>
                     <div className={styles.input_background}>
