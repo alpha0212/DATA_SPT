@@ -71,7 +71,7 @@ function AddSpt() {
                     <div className={styles.input_background}>
                         <input 
                             type="radio"
-                            className={styles.input_time}
+                            className={styles.select_day}
                             name="spt_day"
                             placeholder="요일"
                             onChange={handleChange}
@@ -79,7 +79,7 @@ function AddSpt() {
                         />월
                         <input 
                             type="radio"
-                            className={styles.input_time}
+                            className={styles.select_day}
                             name="spt_day"
                             placeholder="요일"
                             onChange={handleChange}
@@ -87,7 +87,7 @@ function AddSpt() {
                         />화
                         <input 
                             type="radio"
-                            className={styles.input_time}
+                            className={styles.select_day}
                             name="spt_day"
                             placeholder="요일"
                             onChange={handleChange}
@@ -95,7 +95,7 @@ function AddSpt() {
                         />수
                         <input 
                             type="radio"
-                            className={styles.input_time}
+                            className={styles.select_day}
                             name="spt_day"
                             placeholder="요일"
                             onChange={handleChange}
@@ -103,7 +103,7 @@ function AddSpt() {
                         />목
                         <input 
                             type="radio"
-                            className={styles.input_time}
+                            className={styles.select_day}
                             name="spt_day"
                             placeholder="요일"
                             onChange={handleChange}
@@ -111,7 +111,7 @@ function AddSpt() {
                         />금
                         <input 
                             type="radio"
-                            className={styles.input_time}
+                            className={styles.select_day}
                             name="spt_day"
                             placeholder="요일"
                             onChange={handleChange}
@@ -119,22 +119,12 @@ function AddSpt() {
                         />토
                         <input 
                             type="radio"
-                            className={styles.input_time}
+                            className={styles.select_day}
                             name="spt_day"
                             placeholder="요일"
                             onChange={handleChange}
                             value={`일`}
                         />일
-                    </div>
-                    <div className={styles.input_background}>
-                        <input
-                            type="text"
-                            className={styles.input_time}
-                            name="spt_name"
-                            placeholder="이름"
-                            onChange={handleChange}
-                            value={addSpt.spt_name}
-                        />
                     </div>
                     <div className={styles.input_background}>
                         <input

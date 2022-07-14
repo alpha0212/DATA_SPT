@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import Router from "next/router";
 import { useState, useEffect } from 'react';
 import Loading from '../components/Loading';
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
@@ -28,12 +29,18 @@ function MyApp({ Component, pageProps }) {
   return loading ? (
   <>
     <Loading />
+    <Head>
+      <link rel="shortcut icon" href="spt.ico" />
+    </Head>
 
   </>
   
   ) : (
   <>
     
+    <Head>
+      <link rel="shortcut icon" href="spt.ico" />
+    </Head>
     <Layout />
     <Component {...pageProps} />
     </>

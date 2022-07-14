@@ -36,7 +36,22 @@
     border-left: 0;
     border-right: 0;
     font-family: Pretendard;
-    width: 30vw;
+    width: 25vw;
+    height: 6vh;
+    font-size: 15px;
+    text-align: center;
+    outline: none;
+}
+
+.select_day{
+    background-color: rgb(249, 249, 249);
+    margin: 5px;
+    border-bottom: 1px solid rgb(64, 64, 64);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-family: Pretendard;
+    width: 20vw;
     height: 6vh;
     font-size: 15px;
     text-align: center;
