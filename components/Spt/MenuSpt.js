@@ -10,7 +10,9 @@ export default function Menu(){
     return (
         <>
             <div className={styles.button_index}>
-
+                <Link href="/">
+                    <a className={styles.menu_list}>메인</a>
+                </Link>
                 <Link href="/addSpt">
                     <a className={styles.menu_list}>시간적기</a>
                 </Link>

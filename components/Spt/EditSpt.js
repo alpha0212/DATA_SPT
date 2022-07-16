@@ -9,7 +9,6 @@ function EditSpt({ sptUpdateData }) {
   console.log("sptid", sptUpdateData);
   const router = useRouter();
   const [addSpt, setSpt] = useState({
-    spt_name: "",
     spt_day: "",
     spt_set_morning: "",
     spt_morning: "",
@@ -27,6 +26,7 @@ function EditSpt({ sptUpdateData }) {
     spt_break: "",
     spt_break_action: "",
     spt_name: "",
+
   });
   useEffect(() => {
     setSpt(sptUpdateData[0]);
@@ -39,7 +39,6 @@ function EditSpt({ sptUpdateData }) {
     );
     if (data.data) router.push("/spts");
     setSpt({
-      spt_name: "",
       spt_day: "",
       spt_set_morning: "",
       spt_morning: "",
@@ -64,6 +63,7 @@ function EditSpt({ sptUpdateData }) {
     console.log("value", value);
     setSpt({ ...addSpt, [e.target.name]: value });
   };
+  
   return (
        <>
             <Title title="Today" />
@@ -128,16 +128,7 @@ function EditSpt({ sptUpdateData }) {
                             value={`일`}
                         />일
                     </div>
-                    <div className={styles.input_background}>
-                        <input
-                            type="text"
-                            className={styles.input_time}
-                            name="spt_name"
-                            placeholder="이름"
-                            onChange={handleChange}
-                            value={addSpt.spt_name}
-                        />
-                    </div>
+
                     <div className={styles.input_background}>
                         <input
                             type="text"
@@ -288,6 +279,7 @@ function EditSpt({ sptUpdateData }) {
                             value={addSpt.spt_break_action}
                         />
                     </div>
+                    <div>헬로 디스이즏데이터 {addSpt.spt_break_action}</div>
                     <div className={styles.input_center}>
                         <button className={styles.Get_button} type="submit">Submit</button>
                         <button className={styles.Get_button}><Link href={`/spts`}>Back</Link></button>
@@ -296,6 +288,8 @@ function EditSpt({ sptUpdateData }) {
             </div>
         </>
     );
+
   }
+
 
   export default EditSpt;

@@ -156,3 +156,10 @@
   margin-right: 2vw;
   margin-left: 2vw;
 }
+
+.menu_main{
+  font-size: 15px;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  align-items: left;
+}
