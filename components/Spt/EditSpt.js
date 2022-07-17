@@ -26,7 +26,6 @@ function EditSpt({ sptUpdateData }) {
     spt_break: "",
     spt_break_action: "",
     spt_name: "",
-
   });
   useEffect(() => {
     setSpt(sptUpdateData[0]);

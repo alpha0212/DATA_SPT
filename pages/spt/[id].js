@@ -1,8 +1,14 @@
 import EditSpt from "../../components/Spt/EditSpt";
+import Graph from "../Graph";
 
 function updateSpt({ spt }) {
   console.log("spt", spt);
-  return <EditSpt sptUpdateData={spt} />;
+  return (
+  <>
+    <EditSpt sptUpdateData={spt} />
+    <Graph sptUpdateData={spt} />
+  </>
+  );
 }
 
 export async function getServerSideProps({ params }) {
