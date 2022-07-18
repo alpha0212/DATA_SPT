@@ -69,7 +69,7 @@ export default function Graph() {
         <div className={styles.content_line} />
         <div className={`${styles.graph_center}`}>
           <div className={styles.PieGraph}>
-            <PieGraph chartData={sleepData}/>
+            <PieGraph chartData={subData}/>
           </div>
         </div>
       </div>

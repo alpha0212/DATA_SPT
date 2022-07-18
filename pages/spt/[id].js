@@ -6,7 +6,6 @@ function updateSpt({ spt }) {
   return (
   <>
     <EditSpt sptUpdateData={spt} />
-    <Graph sptUpdateData={spt} />
   </>
   );
 }

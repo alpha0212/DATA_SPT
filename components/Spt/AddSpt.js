@@ -7,8 +7,8 @@ import styles from "../../styles/Today.module.css";
 function AddSpt() {
   const router = useRouter();
   const [addSpt, setSpt] = useState({
-    spt_name: "",
     spt_day: "",
+    spt_name: "",
     spt_set_morning: "",
     spt_morning: "",
     spt_set_sleep: "",
@@ -34,8 +34,8 @@ function AddSpt() {
     );
     if (data.data) router.push("/spts");
     setSpt({
-      spt_name: "",
       spt_day: "",
+      spt_name: "",
       spt_set_morning: "",
       spt_morning: "",
       spt_set_sleep: "",
@@ -125,6 +125,16 @@ function AddSpt() {
                             onChange={handleChange}
                             value={`일`}
                         />일
+                    </div>
+                    <div className={styles.input_background}>
+                        <input
+                            type="text"
+                            className={styles.input_time}
+                            name="spt_name"
+                            placeholder="이름"
+                            onChange={handleChange}
+                            value={addSpt.spt_name}
+                        />
                     </div>
                     <div className={styles.input_background}>
                         <input

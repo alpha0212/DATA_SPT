@@ -4,8 +4,6 @@ import { useRouter } from "next/router";
 import styles from "../../styles/SptList.module.css";
 import style from "../../styles/Today.module.css";
 import axios from "axios";
-import BarGraph from "../GraphList/BarGraph";
-
 
 function SptList({sptData}) {
     const router = useRouter();
@@ -67,15 +65,10 @@ function SptList({sptData}) {
                         className={style.Delete_Button}
                         onClick={() => deleteSpt(sptData.spt_id)}
                       >
-                        Delete
+                        삭제
                       </button>
                       <button className={style.Update_Button}>
-                        <Link href={`/spt/${sptData.spt_id}`}>Update</Link>
-                      </button>
-                      <button className={styles.Update_Button}>
-                        <Link href="/Graph">
-                          <a className={styles.menu_list}>그래프</a>
-                        </Link>
+                        <Link href={`/spt/${sptData.spt_id}`}>업데이트 및 그래프</Link>
                       </button>
                     </td>
                   </tr>

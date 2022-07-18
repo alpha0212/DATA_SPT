@@ -9,6 +9,11 @@ export const SubData = [
       sub: "영어",
       time: 2,
     },
+    {
+      id: 3,
+      sub: "낮잠시간",
+      time: 1,
+    }
   ];
 
 export const SleepData = [
@@ -31,10 +36,5 @@ export const SleepData = [
     id: 4,
     sub: "실제취침시간",
     time: 12,
-  },
-  {
-    id: 5,
-    sub: "낮잠시간",
-    time: 1,
   }
 ]

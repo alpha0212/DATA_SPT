@@ -3,6 +3,7 @@ import Joi from "joi";
 const sptValidation = (data) => {
   const sptSchme = Joi.object({
     spt_day: Joi.string().required(),
+    spt_name: Joi.string().required(),
     spt_set_morning: Joi.string().required(),
     spt_morning: Joi.string().required(),
     spt_set_sleep: Joi.string().required(),
