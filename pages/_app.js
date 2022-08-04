@@ -2,7 +2,7 @@ import Layout from '../components/Layout'
 import '../styles/globals.css'
 import Router from "next/router";
 import { useState, useEffect } from 'react';
-import Loading from '../components/Loading';
+import Loading from '../components/Loading/Loading';
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
@@ -29,9 +29,7 @@ function MyApp({ Component, pageProps }) {
   return loading ? (
   <>
     <Loading />
-    <Head>
-      <link rel="shortcut icon" href="spt.ico" />
-    </Head>
+
 
   </>
   

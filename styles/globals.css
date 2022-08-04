@@ -1,7 +1,8 @@
 
-@font-face{
-  font-family: 'Pretendard';
-  src: url(../public/static/woff2/Pretendard-Light.woff2);
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* { 
+font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 body {
   background-color: rgba(249, 249, 249);

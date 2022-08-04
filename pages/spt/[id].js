@@ -1,5 +1,4 @@
 import EditSpt from "../../components/Spt/EditSpt";
-import Graph from "../Graph";
 
 function updateSpt({ spt }) {
   console.log("spt", spt);

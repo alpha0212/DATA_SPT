@@ -1,10 +1,9 @@
-
 const mysql = require("serverless-mysql")();
 mysql.config({
-  host: "localhost",
-  database: "data",
-  user: "root",
-  password: "",
+  host: "sptdatabase.cra01zi9ewcg.ap-northeast-2.rds.amazonaws.com",
+  database: "sptdatabase",
+  user: "admin",
+  password: "awsWNS!gml6628",
 });
 
 const executeQuery = (query, arraParms) => {

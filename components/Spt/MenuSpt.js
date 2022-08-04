@@ -19,7 +19,12 @@ export default function Menu(){
                 <Link href="/spts">
                     <a className={styles.menu_list}>목록(admin)</a>
                 </Link> 
-
+                <Link href="/mentor">
+                    <a className={styles.menu_list}>멘토구함</a>
+                </Link>
+                <Link href="/mentee">
+                    <a className={styles.menu_list}>멘티구함</a>
+                </Link>
             </div>
             <div className={styles.content_line}></div>
         </>
