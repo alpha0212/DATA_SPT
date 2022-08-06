@@ -16,11 +16,18 @@ const sptValidation = (data) => {
     spt_community: Joi.string().required(),
     spt_kh: Joi.string().required(),
     spt_study: Joi.string().required(),
-    spt_livetime: Joi.string().required(),  
+    spt_livetime: Joi.string().required(),
     spt_break: Joi.string().required(),
     spt_break_action: Joi.string().required(),
   });
   return sptSchme.validate(data);
+  const userSchme = Joi.object({
+    user_name: Joi.string().required(),
+    user_id: Joi.string().required(),
+    user_pw: Joi.string().required(),
+    user_info: Joi.string().required(),
+  });
+  return userSchme.validate(data);
 };
 
 export default sptValidation;

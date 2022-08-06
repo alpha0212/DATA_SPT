@@ -2576,7 +2576,7 @@
   dependencies:
     "trouter" "^3.1.0"
 
-"next@>=10.2.0", "next@11.0.1":
+"next@^11.0.1", "next@>=10.2.0":
   "integrity" "sha512-yR7be7asNbvpVNpi6xxEg28wZ7Gqmj1nOt0sABH9qORmF3+pms2KZ7Cng33oK5nqPIzEEFJD0pp2PCe3/ueMIg=="
   "resolved" "https://registry.npmjs.org/next/-/next-11.0.1.tgz"
   "version" "11.0.1"
